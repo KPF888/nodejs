@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <button class="getbtn">GET</button>
+    <button class="postbtn">POST</button>
+    <button class="deletebtn">DELETE</button>
+    <button class="jsonpbtn">JSONP</button>
+
+
+
+    <script>
+        $(function () {
+            //1.发送get请求
+            $('.getbtn').on('click', function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://127.0.0.1/api/get',
+                    data: {
+                        name: 'zs',
+                        pwd: 123
+                    },
+                    success: (res) => {
+                        console.log(res);
+                    }
+                })
+            })
+            //2.发送post请求
+            $('.postbtn').on('click', function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://127.0.0.1/api/post',
+                    data: {
+                        bookname: '水浒传',
+                        author: '施耐庵'
+                    },
+                    success: (res) => {
+                        console.log(res);
+                    }
+                })
+            })
+            //3.发送delete请求 属于预检请求 浏览器会先发送一个options请求，确认能够响应才会发送真实请求
+            $('.deletebtn').on('click', function () {
+                $.ajax({
+                    type: 'delete',
+                    url: 'http://127.0.0.1/api/delete',
+                    success: (res) => {
+                        console.log(res);
+                    }
+                })
+            })
+            //4.发送jsonp请求
+            $('.jsonpbtn').on('click', function () {
+                $.ajax({
+                    type: 'get',
+                    url: 'http://127.0.0.1/api/jsonp',
+                    dataType: 'jsonp',
+                    success: (res) => {
+                        console.log(res);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

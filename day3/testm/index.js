@@ -1,0 +1,1 @@
+console.log('没有package.json 自动加载了文件夹中的 index.js');

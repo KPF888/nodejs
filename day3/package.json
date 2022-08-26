@@ -1,0 +1,21 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "kkk-tools",
+    "version": "1.0.0",
+    "main": "kkk.js",
+    "description": "提供格式化时间、HTMLEscape相关功能",
+    "keywords": [
+        "kkk",
+        "tools",
+        "kkk.js",
+        "dateFormat",
+        "HTMLEscape"
+    ],
+    "license": "ISC"
+}
